@@ -1,0 +1,1 @@
+meson compile -C ./builddir; Copy-Item .\builddir\subprojects\SDL3-3.4.14\SDL3.dll .\builddir\
