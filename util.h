@@ -1,14 +1,17 @@
+static int VECTOR_ERROR_MALLOC_FAILED = -1;
+static int VECTOR_SUCCESS_GENERIC = 1;
 
 // dyn array
 typedef struct Vector {
-    void* _buff;
-    int _element_size;
-    void* _current_position;
-    int _buff_size; // size of buffer in bytes
+    char* _buff;
+    int _element_size_bytes;
+    int length;
+    int _max_length_bytes;
+    int _current_offset_bytes;
 } Vector;
 
 Vector* vector_init(int size, int element_size);
-void vector_push(Vector* vec, void* item);
-void vector_pop(Vector* vec);
-void vector_remove(Vector* vec, int index);
-void vector_free(Vector* vec);
+int vector_push(Vector* vec, void* item);
+int vector_pop(Vector* vec);
+int vector_remove(Vector* vec, int index);
+int vector_free(Vector* vec);
