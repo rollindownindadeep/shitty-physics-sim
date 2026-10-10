@@ -1,5 +1,5 @@
-int SHAPE_CIRCLE = 0;
-int SHAPE_RECTANGLE = 1;
+int ENTITY_SHAPE_CIRCLE = 0;
+int ENTITY_SHAPE_RECTANGLE = 1;
 
 struct Entity {
     float x;
