@@ -14,6 +14,7 @@ void test_vector_init()
     assert(casted_buff[0] == 67 && casted_buff[1] && 67 && casted_buff[2] == 67);
 }
 
+//TODO: test exceeding the size of the ting
 void test_vector_push()
 {
     Vector *vector = vector_init(100, sizeof(int));

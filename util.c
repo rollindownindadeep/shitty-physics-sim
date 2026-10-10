@@ -44,6 +44,7 @@ int vector_push(Vector* vec, void* item)
             return VECTOR_ERROR_MALLOC_FAILED;
         }
 
+        memcpy(new_buff, vec->_buff, sizeof(vec->_buff));
         free(vec->_buff);
         vec->_buff = (char*)(new_buff);
     }
